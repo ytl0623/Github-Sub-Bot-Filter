@@ -1,6 +1,6 @@
 const params = new URLSearchParams(document.location.search);
 const uid = (params.get("uid") === undefined || params.get("uid") == null) ?
-  "Wei-1" : params.get("uid");
+  "ytl0623" : params.get("uid");
 console.log(uid);
 
 let renderMapping = {
