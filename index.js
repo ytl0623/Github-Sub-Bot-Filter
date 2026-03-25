@@ -3,14 +3,8 @@ const uid = (params.get("uid") === undefined || params.get("uid") == null) ?
   "ytl0623" : params.get("uid");
 console.log(uid);
 
-let renderMapping = {
-  0: "Following not Follower",
-  1: "Follower not Following",
-  2: "Bot",
-  3: "Mutual Follow",
-  4: "Organization"
-};
 let orgs = ["OpenLive3D"];
+let pris = ["okerun", "sphinxzerd", "Brian342", "nykoco", "iousuz", "REIJISAKAMAKI"];
 let bots = ["vjanz", "imaarov", "Rafaelmdcarneiro", "yuuire", "libraiger", "itsparsh10", "sreya-satheesh",
             "blocage", "x3ric", "Ashishcxz", "nathalylorena", "SysAdminHeal", "shahradelahi",
             "md-sazzadul-islam", "kamil-lm", "MisterRust", "smile1130", "sleinkaraman", "rabnail",
@@ -44,7 +38,13 @@ let bots = ["vjanz", "imaarov", "Rafaelmdcarneiro", "yuuire", "libraiger", "itsp
             "ritesh-chauhan0x1", "frieren-mage", "syedahirafatima", "z3roai", "trinhminhtriet",
             "umogal", "ankitkumarbarik", "eva57gr", "cold-cofffeee", "MojiWasp", "onamfc", "foxy1081",
             "pethmm", "ChinmayKaitade", "raptr45", "DanielArturoAlejoAlvarez", "sagar-vaghela",
-            "ualehosaini", "Hackinet", "shinbatsu", "Syipmong", "AliAoun"];
+            "ualehosaini", "Hackinet", "shinbatsu", "Syipmong", "AliAoun", "Mohsen-malekifard",
+            "Mohsen-malekifard", "canan777", "yeahdeth", "giladfuchs", "hexarch", "meigga-hsu",
+            "hexddine", "alhamrizvi-cloud", "beytekindavut", "diorwave", "GXCoder78", "mikechiloane",
+            "wasxy47", "hosseinhezami", "MarkRizzn", "nxxt3d", "tldrwtf", "AnonimusShamshiAlex",
+            "BitMorphX", "goldhorsedev0101", "aspirinoo", "hamse122", "MENOT02", "T-rustdev", "g1f1",
+            "ragibalasad", "rtk17025", "nafofrumzl", "Sam-McAlister", "ShRP69", "valebrokk",
+            "luc-levesque", "sunny-days-365", "xenosie"];
 let allUserChecks = {};
 let allUserObjs = {};
 function dataOrganization() {
@@ -68,7 +68,7 @@ function dataOrganization() {
   });
 }
 
-let data = {"followers":[],"following":[]}
+let data = {"followers":[], "following":[]}
 let req = new XMLHttpRequest();
 let latestType = "followers";
 let countType = 1;
@@ -121,6 +121,13 @@ function apiCall(reqtype) {
 }
 apiCall("user");
 
+let getText = {
+  0: "Following not Follower",
+  1: "Follower not Following",
+  2: "Bot",
+  3: "Mutual Follow",
+  4: "Organization"
+};
 function getColor(check) {
   switch (check) {
     case 0:
@@ -137,9 +144,12 @@ function getColor(check) {
       return {color:'#000'};
   }
 }
-function renderFollow(id) {
-  let check = allUserChecks[id]
-  return <h4 style={getColor(check)}> {renderMapping[check]} </h4>;
+function getPrivate(id) {
+  return pris.includes(id) ? " (Private)" : "";
+}
+function renderFollow(user) {
+  let check = allUserChecks[user.id]
+  return <h4 style={getColor(check)}> {getText[check] + getPrivate(user.login)} </h4>;
 }
 function compareFollowing(a, b) {
   return allUserChecks[a] - allUserChecks[b];
@@ -151,7 +161,7 @@ function Report() {
       <tr>
         <td><img src={user.avatar_url} width="20" /></td>
         <td><a href={user.html_url}><h4> {user.login} </h4></a></td>
-        <td> {renderFollow(user.id)} </td>
+        <td> {renderFollow(user)} </td>
       </tr>
     );
   }, this);
