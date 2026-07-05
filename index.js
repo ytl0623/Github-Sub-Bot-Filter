@@ -53,7 +53,7 @@ let bots = ["vjanz", "imaarov", "Rafaelmdcarneiro", "yuuire", "libraiger", "itsp
             "Abishek0612", "dovas-net", "xcho7i", "jamesgeodi", "aguptaaditya", "tubakhxn", "RenzoMXD",
             "moy-boy", "mathisjs", "jaikaran109", "kaizen12219", "soladdev", "flaviopavim",
             "gaplopez1991", "chahe-dridi", "shiva-yadav-ds", "ye231101", "devycyan", "devnavodhimsara",
-            "white-night-eco-dev"];
+            "white-night-eco-dev", "allen-ray-dev"];
 let allUserChecks = {};
 let allUserObjs = {};
 function dataOrganization() {
