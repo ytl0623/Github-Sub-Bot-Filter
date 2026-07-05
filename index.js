@@ -6,7 +6,8 @@ console.log(uid);
 let orgs = ["OpenLive3D"];
 let pris = ["okerun", "sphinxzerd", "Brian342", "nykoco", "iousuz", "REIJISAKAMAKI", "pawerrx",
             "MRT3NNA", "l0ve-hate", "04esburxo2", "thehappydictator", "s3phikura", "DrSYLV3ON", "BERDLYY",
-            "RANDOMUS3RS", "Katarina-Zaika", "justinT-uH", "hellen-ansah", "swe3tt0oth"];
+            "RANDOMUS3RS", "Katarina-Zaika", "justinT-uH", "hellen-ansah", "swe3tt0oth", "BLO0DP0P",
+            "REVOLV1NG", "AngelofDarknessm", "IrshadChanna"];
 let bots = ["vjanz", "imaarov", "Rafaelmdcarneiro", "yuuire", "libraiger", "itsparsh10", "sreya-satheesh",
             "blocage", "x3ric", "Ashishcxz", "nathalylorena", "SysAdminHeal", "shahradelahi",
             "md-sazzadul-islam", "kamil-lm", "MisterRust", "smile1130", "sleinkaraman", "rabnail",
@@ -50,7 +51,9 @@ let bots = ["vjanz", "imaarov", "Rafaelmdcarneiro", "yuuire", "libraiger", "itsp
             "Dev-next-gen", "jayDevCodes", "conclaveone", "BEPb", "alphacodeke", "theBappy",
             "CreepyLewis", "DaFi-1", "imhth", "aza-ali", "Cre4T3Tiv3", "uthumany", "ankitaaryal",
             "Abishek0612", "dovas-net", "xcho7i", "jamesgeodi", "aguptaaditya", "tubakhxn", "RenzoMXD",
-            "moy-boy", "mathisjs", "jaikaran109", "kaizen12219"];
+            "moy-boy", "mathisjs", "jaikaran109", "kaizen12219", "soladdev", "flaviopavim",
+            "gaplopez1991", "chahe-dridi", "shiva-yadav-ds", "ye231101", "devycyan", "devnavodhimsara",
+            "white-night-eco-dev"];
 let allUserChecks = {};
 let allUserObjs = {};
 function dataOrganization() {
